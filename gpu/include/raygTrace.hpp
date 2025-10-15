@@ -350,7 +350,6 @@ public:
     for (auto &buffer : materialStickingBuffer) {
       buffer.free();
     }
-    neighborsBuffer.free();
     areaBuffer.free();
   }
 
@@ -661,7 +660,6 @@ protected:
   std::set<int> uniqueMaterialIds;
   CudaBuffer materialIdsBuffer;
 
-  CudaBuffer neighborsBuffer;
   float gridDelta = 0.0f;
 
   CudaBuffer areaBuffer;
